@@ -1,0 +1,81 @@
+body {
+    background-color: #2E2E2E;
+    color: #FFFFFF;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.welcome-container, .container {
+    width: 600px;
+    margin: 30% auto;
+    padding: 20px;
+    background-color: #3E3E3E;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+h1, h2 {
+    color: #FFFFFF;
+}
+
+p {
+    color: #FFFFFF;
+    font-size: 18px;
+}
+
+input[type="text"], input[type="time"], select {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #4A4A4A;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #003366;
+    color: #FFFFFF;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0055a5;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background-color: #3E3E3E;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+li span {
+    display: flex;
+    flex-direction: column;
+}
+
+li button {
+    margin-left: 10px;
+}
+
+.category {
+    margin: 20px 0;
+}
+
+.category h3 {
+    margin-bottom: 10px;
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Habit Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="welcome-container" id="welcomeScreen">
+        <h1>Welcome to Phantom</h1>
+        <p>Track your habits and create schedules to stay organized.</p>
+        <button onclick="startTracking()">Start Tracking</button>
+    </div>
+
+    <div class="container" id="habitTracker" style="display: none;">
+        <h1>Phantom's Habit Tracker</h1>
+        <input type="text" id="categoryInput" placeholder="Enter category name">
+        <button onclick="addCategory()">Add Category</button>
+        
+        <input type="text" id="habitInput" placeholder="Enter habit">
+        <select id="categorySelect"></select>
+        <button onclick="addHabit()">Add Habit</button>
+        <button onclick="removeHabit()">Remove Habit</button>
+        <button onclick="showScheduleMaker()">Schedule Maker</button>
+
+        <div id="categoriesList"></div>
+
+        <div id="scheduleMaker" style="display: none;">
+            <h2>Schedule Maker</h2>
+            <input type="text" id="scheduleHabitInput" placeholder="Enter habit name">
+            <input type="time" id="scheduleTimeInput">
+            <button onclick="addSchedule()">Add Schedule</button>
+            <button onclick="hideScheduleMaker()">Back</button>
+
+            <ul id="scheduleList"></ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
