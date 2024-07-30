@@ -8,12 +8,18 @@ body {
 
 .welcome-container, .container {
     width: 600px;
-    margin: 30% auto;
+    position: relative;
+    top: 300px;
+    left: 675px;
     padding: 20px;
     background-color: #3E3E3E;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     text-align: center;
+}
+
+.welcome-container img{
+    width: 300px;
 }
 
 h1, h2 {
