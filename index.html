@@ -8,33 +8,35 @@
     <link rel="shortcut icon" href="Phantom(1).png" type="image/png">
 </head>
 <body>
-    <div class="welcome-container" id="welcomeScreen">
-        <img src="Phantom.png" alt="logo">
-        <p>Track your habits and create schedules to stay organized.</p>
-        <button onclick="startTracking()">Start Tracking</button>
-    </div>
-
-    <div class="container" id="habitTracker" style="display: none;">
-        <h1>Phantom's Habit Tracker</h1>
-        <input type="text" id="categoryInput" placeholder="Enter category name">
-        <button onclick="addCategory()">Add Category</button>
-        
-        <input type="text" id="habitInput" placeholder="Enter habit">
-        <select id="categorySelect"></select>
-        <button onclick="addHabit()">Add Habit</button>
-        <button onclick="removeHabit()">Remove Habit</button>
-        <button onclick="showScheduleMaker()">Schedule Maker</button>
-
-        <div id="categoriesList"></div>
-
-        <div id="scheduleMaker" style="display: none;">
-            <h2>Schedule Maker</h2>
-            <input type="text" id="scheduleHabitInput" placeholder="Enter habit name">
-            <input type="time" id="scheduleTimeInput">
-            <button onclick="addSchedule()">Add Schedule</button>
-            <button onclick="hideScheduleMaker()">Back</button>
-
-            <ul id="scheduleList"></ul>
+    <div class="main">
+        <div class="welcome-container" id="welcomeScreen">
+            <img src="Phantom.png" alt="logo">
+            <p>Track your habits and create schedules to stay organized.</p>
+            <button class="startTracking"  onclick="startTracking()">Start Tracking</button>
+        </div>
+    
+        <div class="container" id="habitTracker" style="display: none;">
+            <h1>Phantom's Habit Tracker</h1>
+            <input type="text" id="categoryInput" placeholder="Enter category name">
+            <button onclick="addCategory()">Add Category</button>
+            
+            <input type="text" id="habitInput" placeholder="Enter habit">
+            <select id="categorySelect"></select>
+            <button class="scheduleHabitInput" onclick="removeHabit()">Remove Habit</button>
+            <button class="scheduleHabitInput" onclick="showScheduleMaker()">Schedule Maker</button>
+            <button class="scheduleHabitInput" onclick="addHabit()">Add Habit</button>
+    
+            <div id="categoriesList"></div>
+    
+            <div id="scheduleMaker" style="display: none;">
+                <h2>Schedule Maker</h2>
+                <input type="text" id="scheduleHabitInput" placeholder="Enter habit name">
+                <input type="time" id="scheduleTimeInput">
+                <button class="scheduleMakerInput" onclick="addSchedule()">Add Schedule</button>
+                <button class="scheduleMakerInput" onclick="hideScheduleMaker()">Back</button>
+    
+                <ul id="scheduleList"></ul>
+            </div>
         </div>
     </div>
     <script src="script.js"></script>
