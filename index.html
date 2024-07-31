@@ -16,16 +16,21 @@
         </div>
     
         <div class="container" id="habitTracker" style="display: none;">
-            <h1>Phantom's Habit Tracker</h1>
+            <h1>Habit Tracker</h1>
             <input type="text" id="categoryInput" placeholder="Enter category name">
-            <button onclick="addCategory()">Add Category</button>
+            <div class="category-btns">
+                <button class="scheduleCategortInput" onclick="addCategory()">Add Category</button>
+            <button class="scheduleCategortInput" onclick="removeCategory()">Remove Category</button>
+            </div>
             
             <input type="text" id="habitInput" placeholder="Enter habit">
             <select id="categorySelect"></select>
-            <button class="scheduleHabitInput" onclick="addHabit()">Add Habit</button>
+            <div class="habit-btns">
+                <button class="scheduleHabitInput" onclick="addHabit()">Add Habit</button>
             <button class="scheduleHabitInput" onclick="removeHabit()">Remove Habit</button>
             <button class="scheduleHabitInput" onclick="showScheduleMaker()">Schedule Maker</button>
-        
+            </div>
+    
             <div id="categoriesList"></div>
     
             <div id="scheduleMaker" style="display: none;">
