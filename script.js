@@ -1,3 +1,25 @@
+document.addEventListener('DOMContentLoaded', () => {
+    updateCategoryList();
+    updateCategorySelect();
+    updateScheduleList();
+
+    // Event listener for category input field to add category on Enter key press
+    const categoryInput = document.getElementById('categoryInput');
+    categoryInput.addEventListener('keyup', (event) => {
+        if (event.key === 'Enter') {
+            addCategory();
+        }
+    });
+
+    // Event listener for habit input field to add habit on Enter key press
+    const habitInput = document.getElementById('habitInput');
+    habitInput.addEventListener('keyup', (event) => {
+        if (event.key === 'Enter') {
+            addHabit();
+        }
+    });
+});
+
 class Habit {
     constructor(name) {
         this.name = name;
@@ -92,6 +114,18 @@ function addCategory() {
         document.getElementById('categoryInput').value = '';
     } else {
         alert('Category already exists or invalid name.');
+    }
+}
+
+function removeCategory() {
+    const categorySelect = document.getElementById('categorySelect');
+    const categoryToRemove = categorySelect.value;
+    
+    if (categoryToRemove && habitTracker.removeCategory(categoryToRemove)) {
+        updateCategoryList();
+        updateCategorySelect();
+    } else {
+        alert('Failed to remove category. Please ensure a category is selected.');
     }
 }
 
@@ -230,3 +264,4 @@ document.addEventListener('DOMContentLoaded', () => {
     updateCategorySelect();
     updateScheduleList();
 });
+
