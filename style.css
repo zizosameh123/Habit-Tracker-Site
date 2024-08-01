@@ -4,7 +4,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    
+    height: 100%;
 }
 
 /* style.css */
@@ -12,13 +12,15 @@ body {
     display: flex;
     justify-content: center; /* horizontally center */
     align-items: center; /* vertically center */
-    height: 100vh; /* full viewport height */
+    min-height: 100vh; /* full viewport height */
+    height: auto;
 }
 
 
 .welcome-container, .container {
     width: 800px;
-    height: 800px;
+    min-height: 600px;
+    height: auto;
     flex-direction: column;
     padding: 20px;
     border-radius: 10px;
@@ -172,7 +174,61 @@ li button {
 
 }
 
+@media screen and (min-width: 1200px) {
+    .welcome-container, .container {
+        margin: 20px;
+        padding: 10px;
+        background-color: #3E3E3E;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        text-align: center;
+    }
 
+    .welcome-container img {
+        width: 200px;
+    }
+    
+    .startTracking {
+        width: 100%;
+    }
+
+    .habit-btns {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .scheduleHabitInput {
+        font-size: .8rem;
+        width: 50%;
+        margin: 5px;
+    }
+
+    .scheduleHabitInput:nth-child(3) {
+        width: 50%; /* Make the third button full width */
+    }
+
+    .scheduleCategortInput {
+        font-size: .8rem;
+        width: 100%;
+        margin: 5px;
+    }
+
+    .scheduleMaker-btns {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .scheduleMakerInput {
+        font-size: .8rem;
+        width: 100%;
+        margin: 5px;
+    }
+
+}
 
 @keyframes gradientBG {
     0% {
@@ -186,7 +242,7 @@ li button {
     }
 }
 
-body {
+body, .main {
     background: linear-gradient(-45deg, rgba(2,0,36,1) , rgba(9,70,121,1), rgba(0,212,255,1));
     background-size: 400% 400%;
     animation: gradientBG 15s ease infinite; /* Changed from 15s to 8s */
